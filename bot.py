@@ -9,7 +9,7 @@ bot = telebot.TeleBot(os.environ.get("TELEGRAM_BOT_TOKEN"))
 def echo_all(message):
     prompt = message.text
     response = openai.Completion.create(
-        engine="davinci",
+        engine="text-davinci-003", # Updated engine name
         prompt=prompt,
         max_tokens=1024,
         n=1,
